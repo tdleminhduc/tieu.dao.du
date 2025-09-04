@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic Tối Giản & Khoa Học: Tề Vật Luận</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Energetic & playful -->
+    <!-- Application Structure Plan: This version completely redesigns the information architecture to address feedback about the previous version being "confusing" and "rambling". It abandons the long-scroll format for a tabbed, modular SPA interface. The content is restructured into a highly logical three-part philosophical argument: 1. The Problem (identifying the source of conflict), 2. The Nature of Reality (understanding the world according to Zhuangzi), and 3. The Solution (the path to wisdom). This structure is direct, non-linear (users can jump to any section), and "scientific" in its logical progression, directly solving the "rambling" issue. -->
+    <!-- Visualization & Content Choices: 
+        - All "Problem" concepts (Thành Kiến, Ngôn Ngữ, Bỉ Thử) -> Goal: Organize -> Viz: A single, unified HTML/CSS diagram -> Justification: Combines multiple ideas into one clear flow to reduce clutter and show direct causality, making it less confusing.
+        - Chân Tể -> Goal: Inform -> Viz: Simplified card with a central question mark -> Justification: Focuses on the core inquiry without extraneous text.
+        - Hệ Thống Lại -> Goal: Organize -> Viz: HTML/CSS Vertical Progression Diagram -> Justification: Retained for its clarity.
+        - Vật Hóa / Hóa Bướm -> Goal: Inform/Relationships -> Viz: Chart.js Donut Chart + simple icon transition -> Justification: The donut chart is paired with a clear visual transition (caterpillar->butterfly) to make the concept of transformation immediately obvious.
+        - Đạo Xu & Dĩ Minh -> Goal: Organize -> Viz: Centralized, non-animated diagram -> Justification: The animation was removed to reduce the "dazed/confused" feeling. The diagram is now a static, clear representation of the core solution, emphasizing clarity over effects.
+        - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. 
+    -->
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f4f7f9;
+        }
+        .tab-button {
+            transition: all 0.3s ease;
+            border-bottom: 4px solid transparent;
+        }
+        .tab-button.active {
+            border-bottom-color: #073B4C;
+            color: #073B4C;
+            font-weight: 700;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            border: 1px solid #e5e7eb;
+        }
+        .card-title {
+            color: #073B4C;
+            font-weight: 600;
+        }
+        .chart-container {
+            position: relative;
+            height: 280px;
+            width: 100%;
+            max-width: 280px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <header class="text-center mb-12">
+            <h1 class="text-3xl md:text-5xl font-bold mb-2 text-[#073B4C]">Tề Vật Luận (齊物論)</h1>
+            <p class="text-lg text-[#118AB2]">Một Cái Nhìn Tập Trung & Khoa Học</p>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="flex justify-center border-b border-gray-300 mb-12">
+            <button class="tab-button active py-4 px-6 text-lg" onclick="showTab('problem')">1. Vấn Đề</button>
+            <button class="tab-button py-4 px-6 text-lg" onclick="showTab('reality')">2. Bản Chất Thực Tại</button>
+            <button class="tab-button py-4 px-6 text-lg" onclick="showTab('solution')">3. Giải Pháp</button>
+        </nav>
+
+        <!-- Content Area -->
+        <main>
+            <!-- Section 1: The Problem -->
+            <section id="problem" class="content-section active">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-[#EF476F]">Nguồn Gốc Của Xung Đột</h2>
+                    <p class="text-md text-gray-600 mt-1">Tại sao con người luôn tranh cãi Đúng-Sai?</p>
+                </div>
+                <div class="card p-8">
+                    <h3 class="text-xl card-title mb-6 text-center">Dòng Chảy Tạo Ra Sự Phân Biệt</h3>
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 text-center">
+                        <div class="p-4 bg-gray-50 rounded-lg">
+                            <p class="font-bold">LĂNG KÍNH CHỦ QUAN</p>
+                            <p class="text-sm">Thành Kiến (成心)</p>
+                        </div>
+                        <div class="text-3xl text-gray-300 font-light">→</div>
+                        <div class="p-4 bg-yellow-50 rounded-lg">
+                            <p class="font-bold">CÔNG CỤ NGÔN NGỮ</p>
+                            <p class="text-sm">Ngôn & Danh (言 & 名)</p>
+                        </div>
+                        <div class="text-3xl text-gray-300 font-light">→</div>
+                        <div class="p-4 bg-red-50 rounded-lg">
+                            <p class="font-bold">THẾ GIỚI ĐỐI LẬP</p>
+                            <p class="text-sm">Thị-Phi, Bỉ-Thử (是非, 彼此)</p>
+                        </div>
+                    </div>
+                    <p class="text-center mt-8 italic text-gray-600">Trang Tử chỉ ra rằng, chính cái tâm phân biệt được hun đúc bởi kinh nghiệm và ngôn ngữ đã chia cắt thực tại toàn thể thành những mảnh đối lập, gây ra xung đột.</p>
+                </div>
+            </section>
+
+            <!-- Section 2: The Nature of Reality -->
+            <section id="reality" class="content-section">
+                 <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-[#06D6A0]">Thế Giới Thực Sự Vận Hành Như Thế Nào?</h2>
+                    <p class="text-md text-gray-600 mt-1">Trang Tử gợi ý một thực tại tự nhiên, đồng nhất và luôn biến chuyển.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="card p-8">
+                        <h3 class="text-xl card-title mb-4 text-center">Không Có Người Cầm Trịch</h3>
+                        <p class="text-center mb-6">Vạn vật vận hành một cách hoàn hảo mà không cần một "ông chủ" (Chân Tể - 真宰) nào cả. Đó là sự Tự Nhiên (自然) của Đạo.</p>
+                        <div class="text-center">
+                            <span class="text-8xl text-gray-200">?</span>
+                            <p class="font-semibold text-[#06D6A0]">→ TỰ NHIÊN</p>
+                        </div>
+                    </div>
+                    <div class="card p-8">
+                        <h3 class="text-xl card-title mb-4 text-center">Một Nguồn, Vạn Tiếng Vang</h3>
+                        <p class="text-center">Mọi âm thanh, mọi quan điểm (Nhân Lại, Địa Lại) đều bắt nguồn từ sự im lặng vĩ đại của Đạo (Thiên Lại - 天籟).</p>
+                        <div class="mt-6 space-y-2 text-center">
+                            <div class="p-2 bg-gray-100 rounded">Nhân Lại</div>
+                            <div class="text-gray-300">↓</div>
+                            <div class="p-2 bg-gray-100 rounded">Địa Lại</div>
+                            <div class="text-gray-300">↓</div>
+                            <div class="p-2 bg-[#06D6A0] text-white rounded font-semibold">Thiên Lại</div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 card p-8">
+                        <h3 class="text-xl card-title mb-4 text-center">Thực Tại Là Dòng Chảy "Vật Hóa" (物化)</h3>
+                        <p class="text-center text-gray-600 mb-6">Ngụ ngôn Trang Chu hóa bướm cho thấy không có gì là cố định. "Ta" và "Vật" chỉ là những trạng thái tạm thời trong dòng chảy chuyển hóa vô tận của vũ trụ.</p>
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                            <div class="text-center">
+                                <p class="text-5xl">🐛</p>
+                                <p class="font-semibold mt-2">Trang Chu</p>
+                            </div>
+                            <div class="text-4xl text-gray-300 font-light">⇌</div>
+                             <div class="text-center">
+                                <p class="text-5xl">🦋</p>
+                                <p class="font-semibold mt-2">Bươm Bướm</p>
+                            </div>
+                            <div class="md:ml-8 chart-container">
+                                <canvas id="butterflyChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: The Solution -->
+            <section id="solution" class="content-section">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-[#FFD166]">Con Đường Của Bậc Trí Giả</h2>
+                    <p class="text-md text-gray-600 mt-1">Làm thế nào để thoát khỏi mê cung của sự phân biệt?</p>
+                </div>
+                <div class="card p-10 text-center">
+                    <h3 class="text-2xl card-title mb-4">Đứng ở "Đạo Xu" (道樞) - Trục Của Vòng Tròn</h3>
+                    <p class="max-w-2xl mx-auto mb-10">Thay vì chạy trên vành ngoài của vòng tròn và tranh cãi, bậc trí giả đứng ở trục trung tâm. Từ đây, mọi cặp đối lập (Đúng-Sai, Sống-Chết, Được-Mất) đều được nhìn thấy như những phần hài hòa của một thể thống nhất.</p>
+                    <div class="flex justify-center items-center">
+                        <div class="relative w-72 h-72 border-4 border-dashed border-[#FFD166] rounded-full flex items-center justify-center">
+                            <div class="absolute w-20 h-20 bg-[#073B4C] rounded-full flex items-center justify-center text-white text-2xl font-bold">樞</div>
+                            <span class="absolute top-2 left-1/2 -translate-x-1/2 px-3 py-1 bg-gray-100 rounded-full text-sm">Đúng</span>
+                            <span class="absolute bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 bg-gray-100 rounded-full text-sm">Sai</span>
+                            <span class="absolute left-2 top-1/2 -translate-y-1/2 px-3 py-1 bg-gray-100 rounded-full text-sm">Sống</span>
+                            <span class="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-1 bg-gray-100 rounded-full text-sm">Chết</span>
+                        </div>
+                    </div>
+                    <p class="text-lg font-semibold mt-10">Phương pháp là "Dĩ Minh" (以明) - Lấy sự sáng suốt mà soi rọi, không phán xét.</p>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab-button');
+        const contents = document.querySelectorAll('.content-section');
+
+        function showTab(tabId) {
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.getAttribute('onclick').includes(tabId)) {
+                    tab.classList.add('active');
+                }
+            });
+            contents.forEach(content => {
+                content.classList.remove('active');
+                if (content.id === tabId) {
+                    content.classList.add('active');
+                }
+            });
+        }
+
+        const butterflyCtx = document.getElementById('butterflyChart');
+        if (butterflyCtx) {
+            new Chart(butterflyCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Trạng thái "Người"', 'Trạng thái "Bướm"'],
+                    datasets: [{
+                        data: [50, 50],
+                        backgroundColor: ['#118AB2', '#06D6A0'],
+                        borderColor: '#ffffff',
+                        borderWidth: 4,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    cutout: '65%',
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
