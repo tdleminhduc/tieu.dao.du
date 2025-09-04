@@ -420,18 +420,7 @@
                 }
             }
             
-            document.querySelectorAll('.gemini-btn').forEach(button => {
-                button.addEventListener('click', () => {
-                    const prompt = button.dataset.prompt;
-                    document.getElementById('modal-title').textContent = '✨ Diễn Giải từ Gemini';
-                    callGeminiAPI(prompt);
-                });
-            });
-
-            document.getElementById('poem-btn').addEventListener('click', () => {
-                const prompt = "Sáng tác một bài thơ 4 câu ngắn gọn tại Việt Nam, theo phong cách hiện đại, lấy cảm hứng từ triết lý 'Tiêu Dao Du' của Trang Tử về sự tự do tự tại, rong chơi không ràng buộc.";
-                document.getElementById('modal-title').textContent = '✨ Thơ Ngẫu Hứng';
-                callGeminiAPI(prompt);
+       
             });
 
         });
