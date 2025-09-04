@@ -42,21 +42,6 @@
             font-size: 3rem;
             line-height: 1;
         }
-        .gemini-modal-overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .gemini-loader {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #0074D9;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -77,7 +62,7 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    <div class="bg-white rounded-lg shadow-lg p-6 text-center flex flex-col">
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
                         <h3 class="text-2xl font-bold text-[#00A6ED] mb-4">Đại (大) vs Tiểu (小)</h3>
                         <div class="flex-grow">
                             <div class="flex justify-around items-center">
@@ -93,10 +78,9 @@
                             </div>
                             <p class="mt-4 text-sm text-gray-600">Đây là sự khác biệt về cảnh giới, không phải sự hơn thua.</p>
                         </div>
-                        <button class="gemini-btn mt-4 w-full bg-blue-100 text-blue-800 font-semibold py-2 px-4 rounded-lg hover:bg-blue-200 transition" data-prompt="Hãy giải thích ngắn gọn ý nghĩa của sự đối lập 'Lớn' và 'Nhỏ' trong Tiêu Dao Du của Trang Tử và cách nó giúp ta đạt được tự do tinh thần trong cuộc sống hiện đại.">✨ Xem Diễn Giải Hiện Đại</button>
                     </div>
 
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
                         <h3 class="text-2xl font-bold text-[#00A6ED] mb-4 text-center">Hữu Đãi (有待) vs Vô Đãi (無待)</h3>
                         <ul class="space-y-3 flex-grow">
                             <li class="p-3 bg-blue-50 rounded-md">
@@ -108,10 +92,9 @@
                                 <p class="text-sm text-green-600">Không cần chỗ dựa, hòa mình với tự nhiên. Đây là đích đến của Tiêu Dao.</p>
                             </li>
                         </ul>
-                         <button class="gemini-btn mt-4 w-full bg-blue-100 text-blue-800 font-semibold py-2 px-4 rounded-lg hover:bg-blue-200 transition" data-prompt="Hãy giải thích khái niệm 'Vô Đãi' (không chỗ dựa) của Trang Tử là gì và làm sao để áp dụng nó vào cuộc sống hiện đại để giảm bớt sự phụ thuộc vào các yếu tố bên ngoài như tiền bạc, danh vọng. Trả lời ngắn gọn.">✨ Xem Diễn Giải Hiện Đại</button>
                     </div>
 
-                    <div class="bg-white rounded-lg shadow-lg p-6 text-center flex flex-col">
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
                         <h3 class="text-2xl font-bold text-[#00A6ED] mb-4">Hữu Dụng (有用) vs Vô Dụng (無用)</h3>
                         <div class="flex-grow">
                             <p class="text-gray-600 mb-4">Nghịch lý về giá trị sử dụng trong con mắt người đời và Đạo.</p>
@@ -120,7 +103,6 @@
                                  <p class="text-gray-600 mt-2">Vì bị xem là vô dụng (gỗ cây xấu, quả bầu to) nên không bị can thiệp, nhờ đó được bảo tồn và sống trọn vẹn kiếp sống tự nhiên.</p>
                             </div>
                         </div>
-                        <button class="gemini-btn mt-4 w-full bg-blue-100 text-blue-800 font-semibold py-2 px-4 rounded-lg hover:bg-blue-200 transition" data-prompt="Hãy đóng vai một triết gia chuyên về Đạo giáo. Giải thích khái niệm 'Cái Dụng của sự Vô Dụng' của Trang Tử bằng ngôn ngữ đơn giản, hiện đại kèm theo một ví dụ thực tế cho người sống ở thế kỷ 21. Giữ câu trả lời ngắn gọn trong một đoạn văn.">✨ Xem Diễn Giải Hiện Đại</button>
                     </div>
                 </div>
             </section>
@@ -181,32 +163,23 @@
                     <p class="mt-2 text-lg text-gray-600">Ba cảnh giới đạt được khi từ bỏ những trói buộc của cái tôi và thế tục.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
-                        <div class="flex-grow">
-                            <p class="text-4xl font-black text-[#00A6ED]">CHÍ NHÂN</p>
-                            <p class="text-2xl my-3">→</p>
-                            <p class="text-3xl font-bold text-gray-700">VÔ KỶ (無己)</p>
-                            <p class="text-gray-500 mt-2">Quên đi cái tôi vị kỷ, không còn xem mình là trung tâm.</p>
-                        </div>
-                         <button class="gemini-btn mt-4 w-full bg-blue-100 text-blue-800 font-semibold py-2 px-4 rounded-lg hover:bg-blue-200 transition" data-prompt="Hãy đóng vai một triết gia. Giải thích khái niệm 'Vô Kỷ' (Quên đi bản thân) của Trang Tử là gì và làm thế nào nó dẫn đến tự do tinh thần trong bối cảnh cuộc sống hiện đại đầy áp lực. Giữ câu trả lời ngắn gọn trong một đoạn văn.">✨ Xem Diễn Giải Hiện Đại</button>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <p class="text-4xl font-black text-[#00A6ED]">CHÍ NHÂN</p>
+                        <p class="text-2xl my-3">→</p>
+                        <p class="text-3xl font-bold text-gray-700">VÔ KỶ (無己)</p>
+                        <p class="text-gray-500 mt-2">Quên đi cái tôi vị kỷ, không còn xem mình là trung tâm.</p>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
-                         <div class="flex-grow">
-                            <p class="text-4xl font-black text-[#00A6ED]">THẦN NHÂN</p>
-                            <p class="text-2xl my-3">→</p>
-                            <p class="text-3xl font-bold text-gray-700">VÔ CÔNG (無功)</p>
-                            <p class="text-gray-500 mt-2">Không màng đến công danh, sự nghiệp, thành tựu thế tục.</p>
-                        </div>
-                         <button class="gemini-btn mt-4 w-full bg-blue-100 text-blue-800 font-semibold py-2 px-4 rounded-lg hover:bg-blue-200 transition" data-prompt="Giải thích ngắn gọn khái niệm 'Vô Công' (không công trạng) của Trang Tử và tại sao việc không màng đến thành tựu lại có thể là một con đường dẫn đến hạnh phúc đích thực trong xã hội hiện đại luôn coi trọng thành công.">✨ Xem Diễn Giải Hiện Đại</button>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <p class="text-4xl font-black text-[#00A6ED]">THẦN NHÂN</p>
+                        <p class="text-2xl my-3">→</p>
+                        <p class="text-3xl font-bold text-gray-700">VÔ CÔNG (無功)</p>
+                        <p class="text-gray-500 mt-2">Không màng đến công danh, sự nghiệp, thành tựu thế tục.</p>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
-                        <div class="flex-grow">
-                            <p class="text-4xl font-black text-[#00A6ED]">THÁNH NHÂN</p>
-                            <p class="text-2xl my-3">→</p>
-                            <p class="text-3xl font-bold text-gray-700">VÔ DANH (無名)</p>
-                            <p class="text-gray-500 mt-2">Không màng đến danh tiếng, sự ghi nhận của người đời.</p>
-                        </div>
-                        <button class="gemini-btn mt-4 w-full bg-blue-100 text-blue-800 font-semibold py-2 px-4 rounded-lg hover:bg-blue-200 transition" data-prompt="Giải thích ngắn gọn khái niệm 'Vô Danh' (không danh tiếng) của Trang Tử. Trong thời đại của mạng xã hội, làm thế nào để thực hành triết lý này để tìm thấy sự bình yên nội tâm?">✨ Xem Diễn Giải Hiện Đại</button>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <p class="text-4xl font-black text-[#00A6ED]">THÁNH NHÂN</p>
+                        <p class="text-2xl my-3">→</p>
+                        <p class="text-3xl font-bold text-gray-700">VÔ DANH (無名)</p>
+                        <p class="text-gray-500 mt-2">Không màng đến danh tiếng, sự ghi nhận của người đời.</p>
                     </div>
                 </div>
             </section>
@@ -232,42 +205,12 @@
                 </div>
             </section>
 
-             <section id="gemini-creative">
-                <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-gray-900">✨ Cảm Hứng Tiêu Dao</h2>
-                    <p class="mt-2 text-lg text-gray-600">Hãy để Gemini sáng tác một bài thơ ngẫu hứng dựa trên tinh thần của Trang Tử.</p>
-                </div>
-                <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8 text-center">
-                    <p class="text-gray-600 mb-6">Nhấn nút bên dưới để nhận một bài thơ 4 câu ngắn gọn, mang đậm tinh thần tự do, tự tại.</p>
-                    <button id="poem-btn" class="w-full bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition text-lg">Tạo một bài thơ ngẫu hứng</button>
-                </div>
-            </section>
-
         </main>
 
         <footer class="text-center mt-16 py-6 border-t border-gray-200">
-            <p class="text-gray-500">Infographic được tăng cường bởi Gemini API để khám phá tư tưởng Trang Tử.</p>
+            <p class="text-gray-500">Infographic được tạo ra để khám phá tư tưởng Trang Tử.</p>
         </footer>
     </div>
-    
-    <div id="gemini-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 gemini-modal-overlay">
-        <div class="bg-white rounded-lg shadow-2xl max-w-2xl w-full mx-auto overflow-hidden">
-            <div class="p-6">
-                <div class="flex justify-between items-start">
-                     <h3 id="modal-title" class="text-2xl font-bold text-gray-800">✨ Diễn Giải từ Gemini</h3>
-                     <button id="close-modal-btn" class="text-gray-400 hover:text-gray-600">&times;</button>
-                </div>
-               
-                <div id="modal-content" class="mt-4 text-gray-600 space-y-4 text-lg min-h-[100px]">
-                    <div id="loader" class="hidden justify-center items-center h-full">
-                        <div class="gemini-loader"></div>
-                    </div>
-                    <p id="gemini-response" class="whitespace-pre-wrap"></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -353,87 +296,6 @@
                     }
                 }
             });
-
-            const modal = document.getElementById('gemini-modal');
-            const closeModalBtn = document.getElementById('close-modal-btn');
-            const loader = document.getElementById('loader');
-            const geminiResponseEl = document.getElementById('gemini-response');
-            
-            const showModal = () => modal.classList.remove('hidden');
-            const hideModal = () => modal.classList.add('hidden');
-            const showLoader = () => {
-                loader.style.display = 'flex';
-                geminiResponseEl.textContent = '';
-            };
-            const hideLoader = () => loader.style.display = 'none';
-
-            closeModalBtn.addEventListener('click', hideModal);
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    hideModal();
-                }
-            });
-            
-            async function callGeminiAPI(prompt, retries = 3, delay = 1000) {
-                showModal();
-                showLoader();
-                
-                const apiKey = "";
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-                
-                const payload = {
-                    contents: [{ parts: [{ text: prompt }] }],
-                };
-
-                for (let i = 0; i < retries; i++) {
-                    try {
-                        const response = await fetch(apiUrl, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(payload)
-                        });
-
-                        if (!response.ok) {
-                            throw new Error(`HTTP error! status: ${response.status}`);
-                        }
-
-                        const result = await response.json();
-                        const candidate = result.candidates?.[0];
-
-                        if (candidate && candidate.content?.parts?.[0]?.text) {
-                            hideLoader();
-                            geminiResponseEl.textContent = candidate.content.parts[0].text;
-                            return;
-                        } else {
-                             throw new Error('Invalid response structure from API.');
-                        }
-                    } catch (error) {
-                        console.error(`Attempt ${i + 1} failed:`, error);
-                        if (i < retries - 1) {
-                            await new Promise(res => setTimeout(res, delay));
-                            delay *= 2; 
-                        } else {
-                            hideLoader();
-                            geminiResponseEl.textContent = 'Đã có lỗi xảy ra khi kết nối tới Gemini. Vui lòng thử lại sau.';
-                        }
-                    }
-                }
-            }
-            
-            document.querySelectorAll('.gemini-btn').forEach(button => {
-                button.addEventListener('click', () => {
-                    const prompt = button.dataset.prompt;
-                    document.getElementById('modal-title').textContent = '✨ Diễn Giải từ Gemini';
-                    callGeminiAPI(prompt);
-                });
-            });
-
-            document.getElementById('poem-btn').addEventListener('click', () => {
-                const prompt = "Sáng tác một bài thơ 4 câu ngắn gọn tại Việt Nam, theo phong cách hiện đại, lấy cảm hứng từ triết lý 'Tiêu Dao Du' của Trang Tử về sự tự do tự tại, rong chơi không ràng buộc.";
-                document.getElementById('modal-title').textContent = '✨ Thơ Ngẫu Hứng';
-                callGeminiAPI(prompt);
-            });
-
         });
     </script>
 </body>
