@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic Toàn Diện: Học & Hiểu Tiêu Dao Du</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F4F8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #00A6ED, #0074D9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            color: #0074D9;
+            line-height: 1;
+        }
+        .icon-unicode {
+            font-size: 3rem;
+            line-height: 1;
+        }
+        .step-icon {
+            font-size: 2.5rem;
+            width: 4rem;
+            height: 4rem;
+            line-height: 4rem;
+            border-radius: 50%;
+        }
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 9999px;
+            overflow: hidden;
+            height: 1rem;
+        }
+        .progress-bar-inner {
+            height: 100%;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-5xl md:text-7xl font-black gradient-text mb-2">Tiêu Dao Du</h1>
+            <p class="text-xl md:text-2xl text-gray-600">Hành Trình Khám Phá Tự Do Tuyệt Đối</p>
+        </header>
+
+        <main class="space-y-16">
+
+            <section id="how-to-learn">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900">Phần 1: Lộ Trình Tiếp Cận</h2>
+                    <p class="mt-2 text-lg text-gray-600">Để thấu hiểu "Tiêu Dao Du", hãy bắt đầu với một phương pháp tiếp cận đúng đắn.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                        <div class="step-icon bg-blue-100 text-blue-500 mb-4">📖</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bước 1: Mở Lòng</h3>
+                        <p class="text-gray-600">Tạm gác lại các định kiến, đọc với một tâm trí cởi mở để cảm nhận thay vì chỉ phân tích.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                        <div class="step-icon bg-green-100 text-green-500 mb-4">⚖️</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bước 2: Nắm Bắt Phạm Trù</h3>
+                        <p class="text-gray-600">Chú ý các cặp đối lập (Lớn-Nhỏ, Dựa-Không Dựa) vì chúng là chìa khóa mở ra tư tưởng của Trang Tử.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                        <div class="step-icon bg-purple-100 text-purple-500 mb-4">🦉</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bước 3: Đọc Ngụ Ngôn</h3>
+                        <p class="text-gray-600">Hiểu rằng mỗi câu chuyện (Chim Bằng, quả bầu to...) đều mang một thông điệp triết học sâu sắc.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                        <div class="step-icon bg-yellow-100 text-yellow-500 mb-4">🧘</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bước 4: Chiêm Nghiệm</h3>
+                        <p class="text-gray-600">Liên hệ các tư tưởng với cuộc sống của chính bạn. Triết học chỉ sống khi được áp dụng.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="core-content">
+                 <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900">Phần 2: Sơ Đồ Tư Duy Nội Dung</h2>
+                    <p class="mt-2 text-lg text-gray-600">Bóc tách các tầng ý nghĩa cốt lõi của chương "Tiêu Dao Du".</p>
+                </div>
+                
+                <div class="space-y-12">
+                    <div id="core-concepts-deep-dive" class="space-y-12">
+                        <div class="bg-gray-800 text-white rounded-lg shadow-2xl p-6 md:p-8">
+                             <h3 class="text-3xl font-bold text-center text-cyan-300 mb-2">Hữu Đãi vs. Vô Đãi: Bản Chất Của Tự Do</h3>
+                             <p class="text-center text-gray-300 mb-8 max-w-3xl mx-auto">Sự tự do không chỉ là khả năng di chuyển, mà là trạng thái tinh thần không còn lệ thuộc vào bất kỳ điều kiện bên ngoài nào.</p>
+                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                                 <div class="space-y-6">
+                                     <h4 class="text-xl font-semibold text-center text-white mb-4">Các Cấp Độ Tự Do</h4>
+                                     <div class="p-4 bg-gray-700 rounded-lg">
+                                         <p class="font-bold">Người thường & Ve Sầu</p>
+                                         <p class="text-sm text-gray-400 mb-2">Bị trói buộc bởi vật chất và định kiến.</p>
+                                         <div class="progress-bar"><div class="progress-bar-inner bg-red-500" style="width: 95%"></div></div>
+                                         <p class="text-xs text-right mt-1 text-red-400">Mức Độ Lệ Thuộc: Rất Cao</p>
+                                     </div>
+                                     <p class="text-center text-2xl text-cyan-400">↓</p>
+                                      <div class="p-4 bg-gray-700 rounded-lg">
+                                         <p class="font-bold">Liệt Tử</p>
+                                         <p class="text-sm text-gray-400 mb-2">Cưỡi gió mà đi, nhưng vẫn phải "dựa vào" gió.</p>
+                                         <div class="progress-bar"><div class="progress-bar-inner bg-yellow-500" style="width: 50%"></div></div>
+                                         <p class="text-xs text-right mt-1 text-yellow-400">Mức Độ Lệ Thuộc: Trung Bình (Hữu Đãi)</p>
+                                     </div>
+                                     <p class="text-center text-2xl text-cyan-400">↓</p>
+                                      <div class="p-4 bg-gray-700 rounded-lg">
+                                         <p class="font-bold">Bậc Chí Nhân / Thần Nhân</p>
+                                         <p class="text-sm text-gray-400 mb-2">Hòa cùng Đạo, không dựa vào đâu cả.</p>
+                                         <div class="progress-bar"><div class="progress-bar-inner bg-green-500" style="width: 5%"></div></div>
+                                         <p class="text-xs text-right mt-1 text-green-400">Mức Độ Lệ Thuộc: Không (Vô Đãi)</p>
+                                     </div>
+                                 </div>
+                                 <div class="flex flex-col items-center">
+                                     <h4 class="text-xl font-semibold text-center text-white mb-4">Phân Bổ Trạng Thái Tinh Thần</h4>
+                                     <p class="text-center text-gray-300 text-sm mb-4">Biểu đồ này minh họa một khái niệm: trong thế giới quan của Trang Tử, số người đạt đến tự do tuyệt đối ("Vô Đãi") là vô cùng ít so với những người vẫn còn bị ràng buộc bởi các điều kiện bên ngoài ("Hữu Đãi").</p>
+                                     <div class="chart-container h-[250px] md:h-[300px]"><canvas id="freedomStateChart"></canvas></div>
+                                 </div>
+                             </div>
+                        </div>
+
+                        <div class="bg-gray-800 text-white rounded-lg shadow-2xl p-6 md:p-8">
+                             <h3 class="text-3xl font-bold text-center text-emerald-300 mb-2">Vô Dụng Chi Dụng: Cái Dụng Của Sự Vô Dụng</h3>
+                             <p class="text-center text-gray-300 mb-8 max-w-3xl mx-auto">Trang Tử lật ngược quan niệm thường về giá trị. Đôi khi, chính sự "vô dụng" theo tiêu chuẩn thế gian lại là điều kiện cho một sự tồn tại tự do và hữu ích ở một tầng nghĩa cao hơn.</p>
+                             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                 <div class="bg-gray-700 p-6 rounded-lg">
+                                    <p class="text-center text-4xl mb-3">🌳</p>
+                                     <h4 class="text-xl font-bold text-center mb-4 text-emerald-400">Cây Xư Vô Dụng</h4>
+                                     <p><span class="font-semibold text-gray-400">Công dụng thường:</span> <span class="font-bold text-red-400">VÔ DỤNG</span></p>
+                                     <p class="text-sm text-gray-300 mb-4">Gỗ cong queo, không thể dùng làm cột nhà hay vật dụng.</p>
+                                     <p><span class="font-semibold text-gray-400">Đại dụng:</span> <span class="font-bold text-green-400">HỮU DỤNG</span></p>
+                                     <p class="text-sm text-gray-300">Vì vô dụng nên không bị đốn, sống lâu, trở thành cây cổ thụ cho mọi người nghỉ mát. Sự tồn tại của nó chính là giá trị lớn nhất.</p>
+                                 </div>
+                                 <div class="bg-gray-700 p-6 rounded-lg">
+                                     <p class="text-center text-4xl mb-3">🎃</p>
+                                     <h4 class="text-xl font-bold text-center mb-4 text-emerald-400">Quả Bầu Lớn</h4>
+                                     <p><span class="font-semibold text-gray-400">Công dụng thường:</span> <span class="font-bold text-red-400">VÔ DỤNG</span></p>
+                                     <p class="text-sm text-gray-300 mb-4">To và yếu, không thể dùng để múc nước.</p>
+                                     <p><span class="font-semibold text-gray-400">Đại dụng:</span> <span class="font-bold text-green-400">HỮU DỤNG</span></p>
+                                     <p class="text-sm text-gray-300">Có thể dùng làm thuyền để rong chơi trên sông hồ. Nó mở ra một công dụng lớn lao hơn khi ta thay đổi góc nhìn.</p>
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+
+                    <div id="fables">
+                        <h3 class="text-2xl font-bold text-center text-gray-700 mt-12 mb-6">Nhánh 2: Các Câu Chuyện Ngụ Ngôn Chính</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                             <div class="md:col-span-2 bg-white rounded-lg shadow-lg p-6">
+                                <h4 class="text-2xl font-bold text-center text-[#0074D9] mb-4">Cá Côn Hóa Chim Bằng</h4>
+                                <p class="text-center text-gray-600 mb-6">Minh họa cho sự biến hóa vĩ đại và hành trình trở về với Đạo.</p>
+                                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                                    <div class="text-center"><p class="icon-unicode">🐟</p><p class="text-xl font-bold">CÁ CÔN</p><p class="text-gray-500">Tiềm ẩn, sâu thẳm</p></div>
+                                    <div class="flow-arrow transform rotate-90 md:rotate-0">→</div>
+                                    <div class="text-center"><p class="icon-unicode">🦅</p><p class="text-xl font-bold">CHIM BẰNG</p><p class="text-gray-500">Biểu hiện, vươn xa</p></div>
+                                    <div class="flow-arrow transform rotate-90 md:rotate-0">→</div>
+                                    <div class="text-center"><p class="icon-unicode">🌌</p><p class="text-xl font-bold">NAM MINH</p><p class="text-gray-500">Bể trời, cội nguồn</p></div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-lg p-6">
+                                <h4 class="text-2xl font-bold text-center text-[#0074D9] mb-4">So Sánh Tầm Nhìn</h4>
+                                <p class="text-center text-gray-600 mb-4">"Tiểu tri" (cái biết nhỏ) không thể hiểu "đại tri" (cái biết lớn). Biểu đồ thể hiện sự khác biệt về "cảnh giới" một cách tương đối.</p>
+                                <div class="chart-container"><canvas id="visionChart"></canvas></div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col justify-center">
+                                <h4 class="text-2xl font-bold text-center text-[#0074D9] mb-4">Người ở núi Miêu Cô Dịch</h4>
+                                <p class="text-center text-gray-600 mb-6">Hình mẫu của bậc Thần Nhân, người đã siêu việt khỏi những giới hạn của người thường.</p>
+                                <ul class="space-y-4 text-lg text-center">
+                                    <li class="flex items-center justify-center space-x-3"><span class="text-2xl">❄️</span><span>Da thịt như băng tuyết</span></li>
+                                    <li class="flex items-center justify-center space-x-3"><span class="text-2xl">🌬️</span><span>Không ăn ngũ cốc, hít gió uống sương</span></li>
+                                    <li class="flex items-center justify-center space-x-3"><span class="text-2xl">🐉</span><span>Cưỡi mây đạp rồng, rong chơi bốn bể</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                     
+                    <div id="cultivation">
+                        <h3 class="text-2xl font-bold text-center text-gray-700 mt-12 mb-6">Nhánh 3: Con Đường Tu Dưỡng</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                            <div class="bg-white rounded-lg shadow-lg p-6"><p class="text-4xl font-black text-[#00A6ED]">CHÍ NHÂN</p><p class="text-2xl my-3">→</p><p class="text-3xl font-bold text-gray-700">VÔ KỶ (無己)</p><p class="text-gray-500 mt-2">Quên đi cái tôi vị kỷ, không còn xem mình là trung tâm.</p></div>
+                            <div class="bg-white rounded-lg shadow-lg p-6"><p class="text-4xl font-black text-[#00A6ED]">THẦN NHÂN</p><p class="text-2xl my-3">→</p><p class="text-3xl font-bold text-gray-700">VÔ CÔNG (無功)</p><p class="text-gray-500 mt-2">Không màng đến công danh, sự nghiệp, thành tựu thế tục.</p></div>
+                            <div class="bg-white rounded-lg shadow-lg p-6"><p class="text-4xl font-black text-[#00A6ED]">THÁNH NHÂN</p><p class="text-2xl my-3">→</p><p class="text-3xl font-bold text-gray-700">VÔ DANH (無名)</p><p class="text-gray-500 mt-2">Không màng đến danh tiếng, sự ghi nhận của người đời.</p></div>
+                        </div>
+                    </div>
+                    
+                    <div id="conclusion">
+                         <h3 class="text-2xl font-bold text-center text-gray-700 mt-12 mb-6">Nhánh 4: Đích Đến Cuối Cùng</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                             <div class="bg-white rounded-lg shadow-lg p-6">
+                                <h4 class="text-2xl font-bold text-center text-[#0074D9] mb-4">Các Thành Tố Của Con Đường</h4>
+                                <p class="text-center text-gray-600 mb-4">Để đạt đến tự do, cần phải tu dưỡng và chuyển hóa nhận thức trên ba phương diện chính.</p>
+                                <div class="chart-container h-[300px] md:h-[350px]"><canvas id="pathChart"></canvas></div>
+                           </div>
+                           <div class="bg-gradient-to-br from-[#00A6ED] to-[#0074D9] rounded-lg shadow-lg p-8 text-center text-white">
+                                <h4 class="text-3xl font-extrabold mb-4">Kết Quả: Tự Tại Vô Ngại</h4>
+                                <p class="text-2xl mb-6">"Rong chơi tự tại trong cõi vô cùng, hòa mình làm một với Đạo."</p>
+                                <p class="text-lg opacity-80">Đây là trạng thái tự do tuyệt đối về tinh thần, không còn bị bất cứ điều gì trói buộc, kể cả không gian, thời gian, và chính bản thân mình.</p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="practice">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900">Phần 3: Từ Tri Thức Đến Thực Hành</h2>
+                    <p class="mt-2 text-lg text-gray-600">Làm thế nào để áp dụng triết lý Tiêu Dao vào cuộc sống? Trang Tử gợi ý các phương pháp tu dưỡng nội tâm.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-[#00A6ED] mb-4">Tâm Trai (心齋)</h3>
+                        <p class="text-lg font-semibold mb-2">Để Tâm Hồn "Ăn Chay"</p>
+                        <p class="text-gray-600 mb-4">Là quá trình gạt bỏ sự ồn ào của giác quan và những phán xét của lý trí để trở về trạng thái tĩnh lặng, sáng suốt, cảm nhận trực tiếp mà không qua lăng kính của định kiến.</p>
+                        <ul class="space-y-2">
+                            <li><span class="font-semibold text-gray-700">Mục tiêu:</span> Đạt đến trạng thái tâm trí trống rỗng (hư), sẵn sàng hòa nhập với Đạo.</li>
+                            <li><span class="font-semibold text-gray-700">Cách làm:</span> Nghe bằng "khí", tức là cảm nhận thuần túy, không phân tích, không phán xét.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-[#0074D9] mb-4">Toạ Vong (坐忘)</h3>
+                        <p class="text-lg font-semibold mb-2">Ngồi Để Quên Lãng</p>
+                        <p class="text-gray-600 mb-4">Là phương pháp triệt để hơn: quên đi chính bản thân mình, từ thân thể, trí thông minh cho đến các quy chuẩn xã hội và cuối cùng là quên đi "cái tôi" vị kỷ.</p>
+                         <ul class="space-y-2">
+                            <li><span class="font-semibold text-gray-700">Mục tiêu:</span> "Đồng với Đại Đạo" - không còn sự phân biệt giữa ta và vạn vật.</li>
+                            <li><span class="font-semibold text-gray-700">Kết quả:</span> Đạt được trạng thái Vô Kỷ (không có cái tôi), nền tảng của tự do tuyệt đối.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 py-6 border-t border-gray-200">
+            <p class="text-gray-500">Infographic được tạo ra để khám phá tư tưởng Trang Tử một cách toàn diện.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            function wrapLabel(str, maxWidth) {
+                if (str.length <= maxWidth) return str;
+                const words = str.split(' ');
+                let lines = [];
+                let currentLine = words[0];
+                for (let i = 1; i < words.length; i++) {
+                    if ((currentLine + " " + words[i]).length > maxWidth) {
+                        lines.push(currentLine);
+                        currentLine = words[i];
+                    } else {
+                        currentLine += " " + words[i];
+                    }
+                }
+                lines.push(currentLine);
+                return lines;
+            }
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                return Array.isArray(label) ? label.join(' ') : label;
+            };
+
+            const visionCtx = document.getElementById('visionChart').getContext('2d');
+            new Chart(visionCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Ve sầu, chim cưu', 'Chim Bằng'],
+                    datasets: [{
+                        label: 'Cảnh giới (ước lệ)',
+                        data: [10, 1000],
+                        backgroundColor: ['#7FDBFF', '#0074D9'],
+                        borderColor: ['#39CCCC', '#001f3f'],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+                    scales: { x: { beginAtZero: true, ticks: { display: false } }, y: { ticks: { font: { size: 14, weight: 'bold' } } } },
+                    plugins: { legend: { display: false }, tooltip: { callbacks: { title: tooltipTitleCallback } } }
+                }
+            });
+
+            const pathCtx = document.getElementById('pathChart').getContext('2d');
+            const rawPathLabels = ['Phá vỡ giới hạn tư duy', 'Thuận theo tự nhiên', 'Tu dưỡng Vô Kỷ, Vô Công, Vô Danh'];
+            const wrappedPathLabels = rawPathLabels.map(label => wrapLabel(label, 16));
+            new Chart(pathCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: wrappedPathLabels,
+                    datasets: [{ label: 'Thành Tố', data: [33.3, 33.3, 33.4], backgroundColor: ['#00A6ED', '#0074D9', '#7FDBFF'], hoverOffset: 4 }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { title: tooltipTitleCallback } } }
+                }
+            });
+
+            const freedomCtx = document.getElementById('freedomStateChart').getContext('2d');
+            new Chart(freedomCtx, {
+                 type: 'doughnut',
+                data: {
+                    labels: ['Hữu Đãi (Lệ thuộc vào điều kiện)', 'Vô Đãi (Hoàn toàn tự do)'],
+                    datasets: [{
+                        data: [95, 5],
+                        backgroundColor: ['#4A5568', '#F56565'],
+                        borderColor: '#1A202C',
+                        borderWidth: 4,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#A0AEC0',
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback,
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed + '%';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
